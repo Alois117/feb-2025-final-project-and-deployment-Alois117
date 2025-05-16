@@ -15,4 +15,40 @@ const images = [
   
   changeBackground();
   setInterval(changeBackground, 5000); 
+
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Toggle between ☰ and ✖
+    if (navLinks.classList.contains('active')) {
+      menuToggle.innerHTML = '&times;'; // ✖
+    } else {
+      menuToggle.innerHTML = '&#9776;'; // ☰
+    }
+  });
+
+  // Blog Section fade-in animation for blog cards when they appear
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".blog-card");
+  const options = {
+    threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("animate");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+});
+
   
