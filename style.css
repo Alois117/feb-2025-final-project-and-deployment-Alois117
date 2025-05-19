@@ -174,6 +174,144 @@ body, html {
     padding: 8px 18px;
   }
 }
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #004aad;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  flex: 1 1 60%;
+  margin-right: 20px;
+}
+
+.contact-form h2 {
+  color: #0d47a1;
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: #0d47a1;
+  outline: none;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button {
+  align-self: start;
+  margin-top: 50px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65100;
+}
+
+.form-message {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+.contact-info {
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom:auto;
+}
+
+.contact-info .contact-block{
+  margin-bottom: 10px;
+}
+
+.contact-info .contact-block h3 {
+  color: #0d47a1;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info .contact-block p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    margin-right: 0;
+  }
+}
   
   /* Blog Section */
 .blog-section {

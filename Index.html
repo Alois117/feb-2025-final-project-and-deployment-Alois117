@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shoppers</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,7 +12,7 @@
   <!-- Header Section -->
 <header>
   <div class="top-bar">
-    <p>Visit time: Mon-Sat 9:00–19:00 | Call us: +254 711-840-122</p>
+    <p>Visit time: Mon-Sun 9:00–19:00 | Call us: +254 711-840-122</p>
   </div>
   <nav class="navbar">
     <div class="logo">Shop<span>pers</span></div>
@@ -37,9 +38,54 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-form">
+        <h2>Have any questions?</h2>
+        <p>We’re here to help. Reach out with your inquiries, and we’ll get back to you quickly.</p>
+        <form id="contactForm">
+          <div class="row">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+          </div>
+          <div class="row">
+            <input type="tel" id="phone" placeholder="Phone" required>
+            <input type="text" id="subject" placeholder="Subject" required>
+          </div>
+          <textarea id="message" placeholder="Message" required></textarea>
+          <button type="submit">SUBMIT</button>
+          <p id="formMessage" class="form-message"></p>
+        </form>
+      </div>
+  
+      <div class="contact-info">
+        <div class="contact-block">
+          <h3><i class="fas fa-map-marker-alt"></i> Shop Address</h3>
+          <p>Ruai, Nairobi<br>Country: Kenya</p>
+        </div>
+      
+        <div class="contact-block">
+          <h3><i class="fas fa-clock"></i> Shop Hours</h3>
+          <p>MON - FRI: 8 AM - 7 PM<br>SAT - SUN: 10 AM - 7 PM</p>
+        </div>
+      
+        <div class="contact-block">
+          <h3><i class="fas fa-phone"></i> Contact</h3>
+          <p>Phone: +254 711 840 122<br>Email: support@shoppers.com</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63821.778815958634!2d36.95632320926025!3d-1.2550426126839873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f6c90c15ca769%3A0x8ccf2e1ea67e117b!2sRuai%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1747658870555!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
   <!-- Blog Section -->
   <section class="blog-section">
-    <div class="container">
+    <div class="blog-container">
       <h2 class="section-title">Our Latest Insights</h2>
       <p class="section-subtitle">Discover the Future of Fashion & Lifestyle</p>
   

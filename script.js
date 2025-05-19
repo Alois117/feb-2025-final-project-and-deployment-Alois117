@@ -24,10 +24,47 @@ const images = [
     
     // Toggle between ☰ and ✖
     if (navLinks.classList.contains('active')) {
-      menuToggle.innerHTML = '&times;'; // ✖
+      menuToggle.innerHTML = '&times;'; 
     } else {
-      menuToggle.innerHTML = '&#9776;'; // ☰
+      menuToggle.innerHTML = '&#9776;'; 
     }
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+  
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const formMessage = document.getElementById('formMessage');
+  
+    if (!name || !email || !phone || !subject || !message) {
+      formMessage.textContent = 'Please fill out all fields.';
+      formMessage.style.color = 'red';
+      return;
+    }
+  
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^\+?\d{7,15}$/;
+  
+    if (!emailPattern.test(email)) {
+      formMessage.textContent = 'Please enter a valid email address.';
+      formMessage.style.color = 'red';
+      return;
+    }
+  
+    if (!phonePattern.test(phone)) {
+      formMessage.textContent = 'Please enter a valid phone number.';
+      formMessage.style.color = 'red';
+      return;
+    }
+  
+    // Simulate form submission
+    formMessage.textContent = 'Message sent successfully!';
+    formMessage.style.color = 'green';
+    this.reset();
   });
 
   // Blog Section fade-in animation for blog cards when they appear
