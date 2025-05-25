@@ -30,6 +30,14 @@ const images = [
     }
   });
 
+  // New Arrivals Section
+  document.querySelectorAll('.icon-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert("Feature coming soon!");
+    });
+  });
+
+  // Contact Us Section
   document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
   
